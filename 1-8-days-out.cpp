@@ -16,7 +16,7 @@ int main() {
 	total = daysMissed(numEmployees());
 	cout << endl << "There are " << employees << " employees at the company." << endl;
 	cout << "They missed a total of " << total << " days last year." << endl;
-	cout << "The average days missed by each employee is " << showpoint << fixed << setprecision(2) << averageDays(total, employees) << "." << endl;
+	cout << "The average days missed by each employee is " << showpoint << fixed << setprecision(1) << averageDays(total, employees) << "." << endl;
 }
 
 int numEmployees() {
