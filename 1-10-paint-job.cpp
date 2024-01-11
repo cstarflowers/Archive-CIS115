@@ -22,7 +22,6 @@ int main() {
 	int height,
 		length,
 		width;
-
 	float charge = 25.00,
 		supplies = 10.00;
 
