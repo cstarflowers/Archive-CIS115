@@ -12,13 +12,12 @@ int rooms,
 	sqft = 0,
 	coverage = 110,
 	hourlyLabor = 8;
-
 float gallonCost;
 
 int main() {
 	cout << "How many rooms do you need painted? ";
 	cin >> rooms;
-
+	
 	int height,
 		length,
 		width;
@@ -34,7 +33,6 @@ int main() {
 
 void promptUser(int& h, int& l, int& w) {
 	cout << endl;
-	int i = 0;
 	for(int i = 0; i < rooms; i++) {
 		cout << "The dimension for room number " << i+1 << endl;
 		cout << "Enter the height of the room: ";
@@ -53,7 +51,7 @@ float calcGallon(float& gallonCost) {
 	cout << "What is the price of paint per gallon? ";
 	cin >> gallonCost;
 	cout << endl << endl;
-
+	
 	return gallonCost;
 }
 
