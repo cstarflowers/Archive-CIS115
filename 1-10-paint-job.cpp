@@ -6,7 +6,7 @@ using namespace std;
 
 void promptUser(int&, int&, int&);
 float calcGallon(float&);
-float finalPrice(int&, int&, float&, float&, int&);
+float finalPrice(int, int, float, float, int);
 
 int rooms,
 	sqft = 0,
@@ -57,7 +57,7 @@ float calcGallon(float& gallonCost) {
 	return gallonCost;
 }
 
-float finalPrice(int& sqft, int& coverage, float& charge, float& supplies, int& rooms) {
+float finalPrice(int sqft, int coverage, float charge, float supplies, int rooms) {
 	float sqftF = static_cast<float> (sqft),
 
 	    gallonsNeeded = (sqftF / coverage),
