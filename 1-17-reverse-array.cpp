@@ -13,7 +13,6 @@ int main() {
 		for (int j = 0; j < COLS; j++) {
 			cout << "Enter a number: ";
 			cin >> numbers[i][j];
-			numbers[i][j] = numbers[i][j] * 2;
 		}
 	}
 
