@@ -16,8 +16,7 @@ int main() {
 		}
 	}
 
-	cout << endl;
-	cout << "Forward table" << endl;
+	cout << endl <<"Forward table" << endl;
 	cout << "**************" << endl;
 	for (int i = 0; i < ROWS; i++) {
 		for (int j = 0; j < COLS; j++) {
@@ -26,8 +25,7 @@ int main() {
 		cout << endl;
 	}
 
-	cout << endl;
-	cout << "Double table" << endl;
+	cout << endl << "Double table" << endl;
 	cout << "*************" << endl;
 	for (int i = 0; i < ROWS; i++) {
 		for (int j = 0; j < COLS; j++) {
@@ -36,8 +34,7 @@ int main() {
 		cout << endl;
 	}
 
-	cout << endl;
-	cout << "Reversed table" << endl;
+	cout << endl << "Reversed table" << endl;
 	cout << "**************" << endl;
 	for (int i = ROWS; i > 0; i--) {
 		for (int j = COLS; j > 0; j--) {
