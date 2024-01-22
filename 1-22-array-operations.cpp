@@ -14,7 +14,7 @@ int getHighestInRow(const int[][COLS], int);
 int getLowestInRow(const int[][COLS], int);
 float getAverage(const int[][COLS]);
 const int matrix[ROWS][COLS] = {23, 34, 12, 45, 2,
-				                31, 21, 23, 3, 8,
+				31, 21, 23, 3, 8,
                                 14, 29, 11, 42, 6,
                                 34, 34, 9, 39, 15};
 
