@@ -16,9 +16,9 @@ int main() {
 				silver,
 				bronze,
 				total = 0;
-			string city;
+			string city = "";
 
-			olympics >> year; // a bit of a clunky solution, but by far one of the most effective
+			olympics >> year;
 			olympics >> city;
 			olympics >> athletes;
 			olympics >> gold;
@@ -28,8 +28,10 @@ int main() {
 
 			float totalF = static_cast<float> (total),
 				athletesF = static_cast<float> (athletes);
-			cout << "The " << athletes << " U.S. athletes collected " << total << " total medals at the " << city << " Olympics in " << year << endl;
-			cout << "That is " << fixed << showpoint << setprecision(2) << totalF / athletesF << " medals per athlete" << endl << endl;
+			if (city != "") { // patches an additional print at the end of the file
+				cout << "The " << athletes << " U.S. athletes collected " << total << " total medals at the " << city << " Olympics in " << year << endl;
+				cout << "That is " << fixed << showpoint << setprecision(2) << totalF / athletesF << " medals per athlete" << endl << endl;
+			}
 		}
 		olympics.close();
 	}
