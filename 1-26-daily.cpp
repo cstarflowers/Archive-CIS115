@@ -14,8 +14,7 @@ int main() {
 				athletes,
 				gold,
 				silver,
-				bronze,
-				total = 0;
+				bronze;
 			string city = "";
 
 			olympics >> year;
@@ -24,7 +23,7 @@ int main() {
 			olympics >> gold;
 			olympics >> silver;
 			olympics >> bronze;
-			total += gold + silver + bronze;
+			int total = gold + silver + bronze;
 
 			float totalF = static_cast<float> (total),
 				athletesF = static_cast<float> (athletes);
