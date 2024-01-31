@@ -13,6 +13,7 @@ int getColumnTotal(const int[][COLS], int);
 int getHighestInRow(const int[][COLS], int);
 int getLowestInRow(const int[][COLS], int);
 float getAverage(const int[][COLS]);
+
 const int matrix[ROWS][COLS] = { 23, 34, 12, 45, 2,
                             31, 21, 23, 3, 8,
                             14, 29, 11, 42, 6,
@@ -35,7 +36,7 @@ int main() {
     cout << "The total of the first row is " << getRowTotal(matrix, 0) << endl;
     cout << "The total of the second column is " << getColumnTotal(matrix, 1) << endl;
     cout << "The highest value in the second row is " << getHighestInRow(matrix, 1) << endl;
-    cout << "The lowest value in the third row is " << getLowestInRow(matrix, 2) << endl;
+    cout << "The lowest value in the third row is " << getLowestInRow(matrix, 2) << endl; // Follows functions on assignment rather than output
 }
 
 int getTotal(const int matrix[][COLS]) {
@@ -60,12 +61,13 @@ int getRowTotal(const int matrix[][COLS], int subscript) {
     for (int j = 0; j < COLS; j++) {
         total += matrix[subscript][j];
     }
+    // Then, return total
     return total;
 }
 
 int getColumnTotal(const int matrix[][COLS], int subscript) {
     int total = 0;
-    for (int i = 0; i < COLS; i++) {
+    for (int i = 0; i < ROWS; i++) {
         total += matrix[i][subscript];
     }
     return total;
