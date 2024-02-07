@@ -39,11 +39,11 @@ int main() {
 	Movie MovieDB2[TOTAL_MOVIES] = {};
 	
 	fstream inFile, outFile;
-	outFile.open("C:\\Users\\carso\\Desktop\\Movies.dat", ios::out | ios::binary);
+	outFile.open("C:\\Movies.dat", ios::out | ios::binary);
 	outFile.write(reinterpret_cast<char*>(MovieDB), sizeof(Movie) * TOTAL_MOVIES);
 	outFile.close();
 
-	inFile.open("C:\\Users\\carso\\Desktop\\Movies.dat", ios::in | ios::binary);
+	inFile.open("C:\\Movies.dat", ios::in | ios::binary);
 	inFile.read(reinterpret_cast<char*>(MovieDB2), sizeof(Movie) * TOTAL_MOVIES);
 	inFile.close();
 	for (int i = 0; i < TOTAL_MOVIES; i++) {
@@ -52,11 +52,11 @@ int main() {
 
 		MovieDB[i].domesticPct = (domesticF / worldwideF) * 100;
 	}
-	outFile.open("C:\\Users\\carso\\Desktop\\Movies.dat", ios::out | ios::binary);
+	outFile.open("C:\\Movies.dat", ios::out | ios::binary);
 	outFile.write(reinterpret_cast<char*>(MovieDB), sizeof(Movie) * TOTAL_MOVIES);
 	outFile.close();
 
-	inFile.open("C:\\Users\\carso\\Desktop\\Movies.dat", ios::in | ios::binary);
+	inFile.open("C:\\Movies.dat", ios::in | ios::binary);
 	inFile.read(reinterpret_cast<char*>(MovieDB2), sizeof(Movie) * TOTAL_MOVIES);
 
 	cout << "Box Office top 20" << endl;
