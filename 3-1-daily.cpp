@@ -14,7 +14,7 @@ int main() {
 	getline(cin, temp);
 	name = new char[temp.length() + 1];
 	for (int i = 0; i < temp.length() + 1; i++) {
-		name[i] = static_cast<char>(temp[i]);
+		name[i] = temp[i];
 	}
 
 	cout << "Please enter employee's box number: ";
@@ -25,20 +25,20 @@ int main() {
 	getline(cin, temp);
 	street = new char[temp.length() + 1];
 	for (int i = 0; i < temp.length() + 1; i++) {
-		street[i] = static_cast<char>(temp[i]);
+		street[i] = temp[i];
 	}
 
 	cout << "Please enter employee's city, state: ";
 	getline(cin, temp);
 	cityState = new char[temp.length() + 1];
 	for (int i = 0; i < temp.length() + 1; i++) {
-		cityState[i] = static_cast<char>(temp[i]);
+		cityState[i] = temp[i];
 	}
 
 	cout << "Please enter employee's zip code: ";
 	cin >> zip;
 
-	
+
 	cout << endl << endl << endl;
 	cout << "Employee Address" << endl;
 	cout << "****************" << endl;
@@ -47,7 +47,5 @@ int main() {
 	cout << cityState << endl;
 	cout << zip << endl;
 
-	delete[] name;
-	delete[] street;
-	delete[] cityState;
+	delete[] name, street, cityState;
 }
