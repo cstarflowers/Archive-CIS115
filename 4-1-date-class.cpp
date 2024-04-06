@@ -18,6 +18,16 @@ public:
 	int getYear() const {
 		return year;
 	}
+	void setMonth(int m) {
+		month = m;
+	}
+	void setDay(int d) {
+		day = d;
+	}
+	void setYear(int y) {
+		year = y;
+	}
+
 	void Print1(int m, int d, int y) {
 		cout << "Print1: " << m << "/" << d << "/" << y << endl;
 	}
@@ -31,21 +41,20 @@ public:
 #endif DATE
 
 Date date;
-int month = date.getMonth(),
-	day = date.getDay(),
-	year = date.getYear();
-int tryMonth(), tryDay(), tryYear();
+int month, day, year;
+
+void tryMonth(), tryDay(), tryYear();
 int main() {
 	tryMonth();
 	tryDay();
 	tryYear();
 
-	date.Print1(month, day, year);
-	date.Print2(month, day, year);
-	date.Print3(month, day, year);
+	date.Print1(date.getMonth(), date.getDay(), date.getYear());
+	date.Print2(date.getMonth(), date.getDay(), date.getYear());
+	date.Print3(date.getMonth(), date.getDay(), date.getYear());
 }
 
-int tryMonth() {
+void tryMonth() {
 	try {
 		cout << "Please enter the month: ";
 		cin >> month;
@@ -53,7 +62,7 @@ int tryMonth() {
 			throw "Error 1: Month must be between 1 and 12";
 		}
 		else {
-			return month;
+			date.setMonth(month);
 		}
 	}
 	catch (const char* err) {
@@ -62,7 +71,7 @@ int tryMonth() {
 	}
 }
 
-int tryDay() {
+void tryDay() {
 	try {
 		cout << "Please enter the day: ";
 		cin >> day;
@@ -70,7 +79,7 @@ int tryDay() {
 			throw "Error 2: Day must be between 1 and 31";
 		}
 		else {
-			return day;
+			date.setDay(day);
 		}
 	}
 	catch (const char* err) {
@@ -79,7 +88,7 @@ int tryDay() {
 	}
 }
 
-int tryYear() {
+void tryYear() {
 	try {
 		cout << "Please enter the year: ";
 		cin >> year;
@@ -87,7 +96,7 @@ int tryYear() {
 			throw 3;
 		}
 		else {
-			return year;
+			date.setYear(year);
 		}
 	}
 	catch (const int err) {
